@@ -84,6 +84,10 @@ html {
         left: 0;
         transition: left 0.3s ease, opacity 0.3s ease;
     }
+    #menu-toggle:not(:checked) ~ .nav {
+    opacity: 0;
+    left: -1000px;
+    }
     .nav-container label {
         display: inline;
         position: fixed;
@@ -102,15 +106,11 @@ html {
         color: white;
     }
     .nav-container .nav .Logo img {
-        position: fixed;
+        position: absolute;
         width: 90px;
         top: 80px;
         left: 45px;
         margin-bottom: 20px;
-    }
-    #menu-toggle:not(:checked) ~ .nav {
-    opacity: 0;
-    left: 0;
     }
     .nav-container .Logo img:hover {
         transform: none;
